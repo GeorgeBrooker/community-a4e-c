@@ -33,12 +33,12 @@ function get_version()
     end
 end
 
--- Log the version of the module on DCS startup
-local version = 'Community A4E-C Version ' .. get_version()
-log.write("Community.A4E-C", log.INFO, version)
-
 -- Register the callbacks for the module
 do
+    -- Log the version of the module on DCS startup
+    local version = 'Community A4E-C Version ' .. get_version()
+    log.write("Community.A4E-C", log.INFO, version)
+
     if isA4EModuleInitialized~=true then
         local A4ECallbacks = {}
 
